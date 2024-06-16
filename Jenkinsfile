@@ -2,9 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('helloworld') {
+        stage('git') {
             steps {
-                echo 'helloworld..'
+                git ( url:"https://github.com/alimelusunku/simple-java-project",
+                      branch: "master"
             }
         }
         stage('Test') {
